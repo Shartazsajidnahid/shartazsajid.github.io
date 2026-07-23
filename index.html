@@ -33,8 +33,8 @@
     background:var(--paper);
     color:var(--ink);
     font-family:'IBM Plex Sans', sans-serif;
-    font-size:16px;
-    line-height:1.65;
+    font-size:19px;
+    line-height:1.72;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3{
@@ -60,7 +60,7 @@
     height:100%; display:flex; align-items:center; justify-content:space-between;
   }
   .nav-mark{
-    font-family:'Source Serif 4', serif; font-weight:700; font-size:1.05rem;
+    font-family:'Source Serif 4', serif; font-weight:700; font-size:1.08rem;
     color:var(--ink); text-decoration:none; letter-spacing:.01em;
   }
   .nav-mark:hover{color:var(--ink);}
@@ -96,15 +96,15 @@
   }
   .eyebrow .num{color:var(--claret);}
   .eyebrow::after{content:''; flex:1; height:1px; background:var(--line-strong); max-width:120px;}
-  .hero h1{font-size:clamp(1.9rem, 4vw, 2.6rem); line-height:1.15;}
+  .hero h1{font-size:clamp(2.2rem, 4vw, 3.1rem); line-height:1.15;}
   .hero .role{
-    font-family:'IBM Plex Mono', monospace; font-size:.85rem; letter-spacing:.03em;
+    font-family:'IBM Plex Mono', monospace; font-size:.9rem; letter-spacing:.03em;
     color:var(--muted); margin-top:10px;
   }
   .hero .bio{margin-top:20px; max-width:56ch; color:var(--ink);}
   .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px; align-items:center;}
   .btn{
-    font-family:'IBM Plex Mono', monospace; font-size:.8rem; letter-spacing:.04em;
+    font-family:'IBM Plex Mono', monospace; font-size:.84rem; letter-spacing:.04em;
     text-transform:uppercase; text-decoration:none;
     padding:11px 20px; border:1px solid var(--navy); color:var(--navy);
     transition:background .15s ease, color .15s ease;
@@ -112,7 +112,7 @@
   .btn.primary{background:var(--navy); color:var(--paper);}
   .btn.primary:hover{background:var(--claret); border-color:var(--claret); color:var(--paper);}
   .btn:not(.primary):hover{background:var(--navy); color:var(--paper);}
-  .links-inline{font-family:'IBM Plex Mono', monospace; font-size:.8rem; color:var(--muted);}
+  .links-inline{font-family:'IBM Plex Mono', monospace; font-size:.84rem; color:var(--muted);}
   .links-inline a{color:var(--ink);}
   .links-inline a:hover{color:var(--claret);}
 
@@ -126,8 +126,8 @@
 
   /* ---------- sections ---------- */
   section{padding:52px 0; border-top:1px solid var(--line);}
-  section h2{font-size:1.5rem;}
-  .section-intro{color:var(--muted); margin-top:8px; max-width:60ch; font-size:.95rem;}
+  section h2{font-size:1.72rem;}
+  .section-intro{color:var(--muted); margin-top:8px; max-width:60ch; font-size:1.08rem;}
 
   /* ledger / timeline entries */
   .entry{display:grid; grid-template-columns:128px 1fr; gap:22px; padding-bottom:26px;}
@@ -141,10 +141,10 @@
     content:''; position:absolute; left:-5px; top:.4em; width:8px; height:8px;
     border-radius:50%; background:var(--navy); border:2px solid var(--paper);
   }
-  .entry-body h3{font-size:1.08rem;}
-  .entry-role{margin:4px 0 0; font-size:.92rem; color:var(--ink);}
-  .entry-meta{margin:4px 0 0; font-size:.85rem; color:var(--muted);}
-  .entry-desc{margin:8px 0 0; font-size:.92rem; color:var(--ink);}
+  .entry-body h3{font-size:1.2rem;}
+  .entry-role{margin:4px 0 0; font-size:1.04rem; color:var(--ink);}
+  .entry-meta{margin:4px 0 0; font-size:.98rem; color:var(--muted);}
+  .entry-desc{margin:8px 0 0; font-size:1.04rem; color:var(--ink);}
   .badge{
     display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:.7rem;
     letter-spacing:.03em; text-transform:uppercase; color:var(--claret);
@@ -152,7 +152,7 @@
   }
 
   /* research interests + skills rows */
-  .tagline-list{font-family:'IBM Plex Sans', sans-serif; font-size:1rem; margin-top:18px;}
+  .tagline-list{font-family:'IBM Plex Sans', sans-serif; font-size:1.12rem; margin-top:18px;}
   .tagline-list span::after{content:' \00b7 '; color:var(--line-strong);}
   .tagline-list span:last-child::after{content:'';}
 
@@ -162,29 +162,29 @@
     font-family:'IBM Plex Mono', monospace; font-size:.76rem; letter-spacing:.05em;
     text-transform:uppercase; color:var(--navy); padding-top:2px;
   }
-  .skill-value{font-size:.94rem;}
+  .skill-value{font-size:1.06rem;}
 
   /* publications */
   .pub{display:grid; grid-template-columns:36px 1fr; gap:18px; padding:20px 0; border-top:1px solid var(--line);}
   .pub:first-of-type{border-top:none;}
   .pub-index{font-family:'IBM Plex Mono', monospace; color:var(--claret); font-size:.95rem; padding-top:2px;}
   .pub-body p{margin:0;}
-  .pub-title{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.02rem; line-height:1.4;}
-  .pub-venue{margin-top:6px !important; font-size:.88rem; color:var(--muted);}
-  .pub-venue a{font-size:.85rem;}
+  .pub-title{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.14rem; line-height:1.4;}
+  .pub-venue{margin-top:6px !important; font-size:1rem; color:var(--muted);}
+  .pub-venue a{font-size:.98rem;}
 
   /* contact */
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:24px;}
-  .contact-block h3{font-family:'IBM Plex Mono', monospace; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; color:var(--navy); font-weight:500;}
+  .contact-block h3{font-family:'IBM Plex Mono', monospace; font-size:.82rem; letter-spacing:.06em; text-transform:uppercase; color:var(--navy); font-weight:500;}
   .contact-block ul{list-style:none; margin:14px 0 0; padding:0;}
-  .contact-block li{margin-bottom:10px; font-size:.94rem;}
+  .contact-block li{margin-bottom:10px; font-size:.98rem;}
   .ref-card{margin-bottom:18px;}
   .ref-card:last-child{margin-bottom:0;}
-  .ref-name{font-family:'Source Serif 4', serif; font-weight:600; font-size:1rem;}
-  .ref-meta{margin:2px 0 0; font-size:.86rem; color:var(--muted);}
+  .ref-name{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.04rem;}
+  .ref-meta{margin:2px 0 0; font-size:.9rem; color:var(--muted);}
 
   footer{padding:28px 0 40px; text-align:center;}
-  footer p{font-family:'IBM Plex Mono', monospace; font-size:.75rem; color:var(--muted); letter-spacing:.03em;}
+  footer p{font-family:'IBM Plex Mono', monospace; font-size:.8rem; color:var(--muted); letter-spacing:.03em;}
 
   /* reveal */
   .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
@@ -237,10 +237,10 @@
   <section id="about">
     <div class="wrap hero reveal">
       <div>
-        <div class="eyebrow"><span class="num">01</span> About</div>
+        <!-- <div class="eyebrow">About</div> -->
         <h1>Shartaz Sajid Nahid</h1>
         <p class="role">Prospective PhD Student — Computer Science &amp; Engineering / Machine Learning</p>
-        <p class="bio">I'm a Lecturer in the Department of Computer Science &amp; Engineering at East West University and a graduate of the University of Dhaka, where I completed my M.Sc. and B.Sc. in Software Engineering, ranking first and second in my class respectively. My research sits at the intersection of transfer learning and software engineering, most recently on orthogonal core-extraction methods for cross-project defect prediction. I'm looking to continue this work at the PhD level, with a broader interest in pattern recognition and natural language processing.</p>
+        <p class="bio">I'm a Lecturer in the Department of Computer Science &amp; Engineering at East West University and a graduate of the University of Dhaka, where I completed my M.Sc. and B.Sc. in Software Engineering, ranking first and second in my class respectively. My research sits at the intersection of machine learning, pattern recognition, and transfer learning. </p>
         <div class="cta-row">
           <a class="btn primary" href="assets/cv/CV_serif.pdf" download>Download CV</a>
           <span class="links-inline">
@@ -260,7 +260,7 @@
   <!-- RESEARCH INTERESTS -->
   <section id="research">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">02</span> Research Interests</div>
+      <!-- <div class="eyebrow">Research Interests</div> -->
       <h2>What I work on</h2>
       <p class="tagline-list">
         <span>Machine Learning</span>
@@ -275,7 +275,7 @@
   <!-- EDUCATION -->
   <section id="education">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">03</span> Education</div>
+      <!-- <div class="eyebrow">Education</div> -->
       <h2>Academic background</h2>
 
       <div style="margin-top:28px;">
@@ -318,18 +318,18 @@
   <!-- PUBLICATIONS -->
   <section id="publications">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">04</span> Publications</div>
+      <!-- <div class="eyebrow">Publications</div> -->
       <h2>Research publications</h2>
 
       <div style="margin-top:24px;">
         <div class="pub">
           <div class="pub-index">[1]</div>
           <div class="pub-body">
-            <p class="pub-title"><strong>S. S. Nahid</strong>, M. S. Islam, M. A. Hossain, M. M. Alam, and M. Shoyaib, "OCMTL: Transfer learning by orthogonal core-extraction of a matrix and its application in cross-project defect prediction."</p>
+            <p class="pub-title"><strong>S. S. Nahid</strong>, M. S. Islam, M. A. Hossain, M. M. Alam, and M. Shoyaib, <a href="https://www.sciencedirect.com/science/article/pii/S1110016825011573" target="_blank" rel="noopener">"OCMTL: Transfer learning by orthogonal core-extraction of a matrix and its application in cross-project defect prediction."</a></p>
             <p class="pub-venue">
               Alexandria Engineering Journal, vol. 133, pp. 498–516, 2025.
               <span class="badge">Elsevier · Q1 · IF 6.8</span><br>
-              <a href="https://www.sciencedirect.com/science/article/pii/S1110016825011573" target="_blank" rel="noopener">View on ScienceDirect →</a>
+              <!-- <a href="https://www.sciencedirect.com/science/article/pii/S1110016825011573" target="_blank" rel="noopener">View on ScienceDirect →</a> -->
             </p>
           </div>
         </div>
@@ -350,7 +350,7 @@
   <!-- PROFESSIONAL EXPERIENCE -->
   <section id="experience">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">05</span> Professional Experience</div>
+      <!-- <div class="eyebrow">Professional Experience</div> -->
       <h2>Teaching &amp; work history</h2>
 
       <div style="margin-top:28px;">
@@ -378,14 +378,14 @@
             <p class="entry-desc">Courses: Python Programming, Office Applications for Smart Office.</p>
           </div>
         </div>
-        <div class="entry">
+        <!-- <div class="entry">
           <div class="entry-date">Jan 2023 — Jun 2023</div>
           <div class="entry-body">
             <h3>Padma Bank Limited</h3>
             <p class="entry-role">Intern, ICT Division</p>
             <p class="entry-desc">Developed an internal web-based data management system for employees, with database integration, search, and filtering capabilities.</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -393,7 +393,7 @@
   <!-- FUNDED PROJECTS -->
   <section id="funded">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">06</span> Funded Projects</div>
+      <!-- <div class="eyebrow">Funded Projects</div> -->
       <h2>Research assistantships</h2>
 
       <div style="margin-top:28px;">
@@ -418,7 +418,7 @@
   <!-- SKILLS -->
   <section id="skills">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">07</span> Skills</div>
+      <!-- <div class="eyebrow">Skills</div> -->
       <h2>Technical skills</h2>
 
       <div style="margin-top:22px;">
@@ -449,7 +449,7 @@
   <!-- AWARDS -->
   <section id="awards">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">08</span> Awards &amp; Honors</div>
+      <!-- <div class="eyebrow"><span class="num">08</span> Awards &amp; Honors</div> -->
       <h2>Grants &amp; awards</h2>
 
       <div style="margin-top:28px;">
@@ -467,13 +467,13 @@
             <p class="entry-meta">Government of Bangladesh</p>
           </div>
         </div>
-        <div class="entry">
+        <!-- <div class="entry">
           <div class="entry-date">2019</div>
           <div class="entry-body">
             <h3>Champion, Yearly Competitive Programming Contest</h3>
             <p class="entry-meta">IIT, University of Dhaka</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -481,7 +481,7 @@
   <!-- THESIS -->
   <section id="thesis">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">09</span> Thesis</div>
+      <!-- <div class="eyebrow">Thesis</div> -->
       <h2>Theses</h2>
 
       <div style="margin-top:28px;">
@@ -506,7 +506,7 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap reveal">
-      <div class="eyebrow"><span class="num">10</span> Contact</div>
+      <!-- <div class="eyebrow">Contact</div> -->
       <h2>Get in touch</h2>
 
       <div class="contact-grid">
