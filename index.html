@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shartaz Sajid Nahid — PhD Applicant, CSE / Machine Learning</title>
+<meta name="description" content="Shartaz Sajid Nahid — Lecturer in Computer Science & Engineering, prospective PhD student in machine learning and software engineering.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231F3358'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23F6F2E9' text-anchor='middle'%3ESN%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F6F2E9;
+    --paper-raised:#EFE9DB;
+    --ink:#262220;
+    --muted:#6B6560;
+    --navy:#1F3358;
+    --claret:#7A2E2E;
+    --line:#DCD5C4;
+    --line-strong:#BEB49D;
+    --max:880px;
+    --nav-h:64px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top: calc(var(--nav-h) + 18px);}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--ink);
+  }
+  a{color:var(--navy); text-decoration-color:var(--line-strong); text-underline-offset:3px;}
+  a:hover{color:var(--claret);}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+
+  /* ---------- nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,242,233,0.94);
+    backdrop-filter:saturate(140%) blur(4px);
+    border-bottom:1px solid var(--line);
+    height:var(--nav-h);
+  }
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:0 24px;
+    height:100%; display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-mark{
+    font-family:'Source Serif 4', serif; font-weight:700; font-size:1.05rem;
+    color:var(--ink); text-decoration:none; letter-spacing:.01em;
+  }
+  .nav-mark:hover{color:var(--ink);}
+  nav.nav-links{display:flex; gap:28px;}
+  nav.nav-links a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted); text-decoration:none;
+    padding:4px 0; border-bottom:1px solid transparent;
+  }
+  nav.nav-links a:hover, nav.nav-links a.active{
+    color:var(--navy); border-bottom-color:var(--navy);
+  }
+  .nav-toggle{
+    display:none; background:none; border:1px solid var(--line-strong);
+    width:38px; height:38px; border-radius:2px; cursor:pointer;
+    align-items:center; justify-content:center; padding:0;
+  }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+    content:''; display:block; width:18px; height:1px; background:var(--ink);
+    position:relative; transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle span::before{position:absolute; top:-6px;}
+  .nav-toggle span::after{position:absolute; top:6px;}
+
+  /* ---------- hero ---------- */
+  section#about{padding:64px 0 56px;}
+  .hero{display:grid; grid-template-columns:1fr 200px; gap:48px; align-items:start;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:.78rem;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--navy);
+    display:flex; align-items:center; gap:10px; margin-bottom:14px;
+  }
+  .eyebrow .num{color:var(--claret);}
+  .eyebrow::after{content:''; flex:1; height:1px; background:var(--line-strong); max-width:120px;}
+  .hero h1{font-size:clamp(1.9rem, 4vw, 2.6rem); line-height:1.15;}
+  .hero .role{
+    font-family:'IBM Plex Mono', monospace; font-size:.85rem; letter-spacing:.03em;
+    color:var(--muted); margin-top:10px;
+  }
+  .hero .bio{margin-top:20px; max-width:56ch; color:var(--ink);}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px; align-items:center;}
+  .btn{
+    font-family:'IBM Plex Mono', monospace; font-size:.8rem; letter-spacing:.04em;
+    text-transform:uppercase; text-decoration:none;
+    padding:11px 20px; border:1px solid var(--navy); color:var(--navy);
+    transition:background .15s ease, color .15s ease;
+  }
+  .btn.primary{background:var(--navy); color:var(--paper);}
+  .btn.primary:hover{background:var(--claret); border-color:var(--claret); color:var(--paper);}
+  .btn:not(.primary):hover{background:var(--navy); color:var(--paper);}
+  .links-inline{font-family:'IBM Plex Mono', monospace; font-size:.8rem; color:var(--muted);}
+  .links-inline a{color:var(--ink);}
+  .links-inline a:hover{color:var(--claret);}
+
+  .portrait{width:200px; height:250px; border:1px solid var(--line-strong); position:relative; overflow:hidden; background:var(--paper-raised);}
+  .portrait img{width:100%; height:100%; object-fit:cover; display:block;}
+  .portrait .fallback{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family:'Source Serif 4', serif; font-size:2.4rem; color:var(--navy);
+    background:var(--paper-raised);
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:52px 0; border-top:1px solid var(--line);}
+  section h2{font-size:1.5rem;}
+  .section-intro{color:var(--muted); margin-top:8px; max-width:60ch; font-size:.95rem;}
+
+  /* ledger / timeline entries */
+  .entry{display:grid; grid-template-columns:128px 1fr; gap:22px; padding-bottom:26px;}
+  .entry:last-child{padding-bottom:0;}
+  .entry-date{
+    font-family:'IBM Plex Mono', monospace; font-size:.78rem; color:var(--muted);
+    padding-top:.3em; letter-spacing:.02em;
+  }
+  .entry-body{position:relative; padding-left:22px; border-left:1px solid var(--line-strong);}
+  .entry-body::before{
+    content:''; position:absolute; left:-5px; top:.4em; width:8px; height:8px;
+    border-radius:50%; background:var(--navy); border:2px solid var(--paper);
+  }
+  .entry-body h3{font-size:1.08rem;}
+  .entry-role{margin:4px 0 0; font-size:.92rem; color:var(--ink);}
+  .entry-meta{margin:4px 0 0; font-size:.85rem; color:var(--muted);}
+  .entry-desc{margin:8px 0 0; font-size:.92rem; color:var(--ink);}
+  .badge{
+    display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:.7rem;
+    letter-spacing:.03em; text-transform:uppercase; color:var(--claret);
+    border:1px solid var(--claret); padding:1px 7px; margin-left:8px; vertical-align:middle;
+  }
+
+  /* research interests + skills rows */
+  .tagline-list{font-family:'IBM Plex Sans', sans-serif; font-size:1rem; margin-top:18px;}
+  .tagline-list span::after{content:' \00b7 '; color:var(--line-strong);}
+  .tagline-list span:last-child::after{content:'';}
+
+  .skill-row{display:grid; grid-template-columns:190px 1fr; gap:20px; padding:14px 0; border-top:1px solid var(--line);}
+  .skill-row:first-of-type{border-top:none;}
+  .skill-label{
+    font-family:'IBM Plex Mono', monospace; font-size:.76rem; letter-spacing:.05em;
+    text-transform:uppercase; color:var(--navy); padding-top:2px;
+  }
+  .skill-value{font-size:.94rem;}
+
+  /* publications */
+  .pub{display:grid; grid-template-columns:36px 1fr; gap:18px; padding:20px 0; border-top:1px solid var(--line);}
+  .pub:first-of-type{border-top:none;}
+  .pub-index{font-family:'IBM Plex Mono', monospace; color:var(--claret); font-size:.95rem; padding-top:2px;}
+  .pub-body p{margin:0;}
+  .pub-title{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.02rem; line-height:1.4;}
+  .pub-venue{margin-top:6px !important; font-size:.88rem; color:var(--muted);}
+  .pub-venue a{font-size:.85rem;}
+
+  /* contact */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:24px;}
+  .contact-block h3{font-family:'IBM Plex Mono', monospace; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; color:var(--navy); font-weight:500;}
+  .contact-block ul{list-style:none; margin:14px 0 0; padding:0;}
+  .contact-block li{margin-bottom:10px; font-size:.94rem;}
+  .ref-card{margin-bottom:18px;}
+  .ref-card:last-child{margin-bottom:0;}
+  .ref-name{font-family:'Source Serif 4', serif; font-weight:600; font-size:1rem;}
+  .ref-meta{margin:2px 0 0; font-size:.86rem; color:var(--muted);}
+
+  footer{padding:28px 0 40px; text-align:center;}
+  footer p{font-family:'IBM Plex Mono', monospace; font-size:.75rem; color:var(--muted); letter-spacing:.03em;}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+
+  @media (max-width:760px){
+    nav.nav-links{
+      position:absolute; top:var(--nav-h); left:0; right:0;
+      background:var(--paper); border-bottom:1px solid var(--line);
+      flex-direction:column; gap:0; padding:6px 24px 14px;
+      display:none;
+    }
+    nav.nav-links.open{display:flex;}
+    nav.nav-links a{padding:10px 0; border-bottom:1px solid var(--line);}
+    .nav-toggle{display:flex;}
+    .hero{grid-template-columns:1fr; gap:26px;}
+    .portrait{width:140px; height:175px; order:-1;}
+    .entry, .skill-row, .contact-grid{grid-template-columns:1fr;}
+    .entry-date{padding-top:0;}
+    .contact-grid{gap:32px;}
+    .pub{grid-template-columns:24px 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#about">S. S. Nahid</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ABOUT / HERO -->
+  <section id="about">
+    <div class="wrap hero reveal">
+      <div>
+        <div class="eyebrow"><span class="num">01</span> About</div>
+        <h1>Shartaz Sajid Nahid</h1>
+        <p class="role">Prospective PhD Student — Computer Science &amp; Engineering / Machine Learning</p>
+        <p class="bio">I'm a Lecturer in the Department of Computer Science &amp; Engineering at East West University and a graduate of the University of Dhaka, where I completed my M.Sc. and B.Sc. in Software Engineering, ranking first and second in my class respectively. My research sits at the intersection of transfer learning and software engineering, most recently on orthogonal core-extraction methods for cross-project defect prediction. I'm looking to continue this work at the PhD level, with a broader interest in pattern recognition and natural language processing.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="assets/cv/CV_serif.pdf" download>Download CV</a>
+          <span class="links-inline">
+            <a href="mailto:bsse1123@iit.du.ac.bd">Email</a> ·
+            <a href="https://github.com/Shartazsajidnahid" target="_blank" rel="noopener">GitHub</a> ·
+            <a href="https://scholar.google.com/citations?user=VjsLHKAAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Google Scholar</a>
+          </span>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="assets/img/profile.jpg" alt="Portrait of Shartaz Sajid Nahid" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">SN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH INTERESTS -->
+  <section id="research">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">02</span> Research Interests</div>
+      <h2>What I work on</h2>
+      <p class="tagline-list">
+        <span>Machine Learning</span>
+        <span>Transfer Learning</span>
+        <span>Pattern Recognition</span>
+        <span>Software Defect Prediction</span>
+        <span>Natural Language Processing</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">03</span> Education</div>
+      <h2>Academic background</h2>
+
+      <div style="margin-top:28px;">
+        <div class="entry">
+          <div class="entry-date">Nov 2025</div>
+          <div class="entry-body">
+            <h3>University of Dhaka</h3>
+            <p class="entry-role">M.Sc. in Software Engineering</p>
+            <p class="entry-meta">CGPA 4.00 / 4.00 — Ranked 1st in class</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">Feb 2024</div>
+          <div class="entry-body">
+            <h3>University of Dhaka</h3>
+            <p class="entry-role">B.Sc. in Software Engineering</p>
+            <p class="entry-meta">CGPA 3.96 / 4.00 — Ranked 2nd in class</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2018</div>
+          <div class="entry-body">
+            <h3>Rajuk Uttara Model College</h3>
+            <p class="entry-role">Higher Secondary Certificate</p>
+            <p class="entry-meta">GPA 5.00 / 5.00</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2016</div>
+          <div class="entry-body">
+            <h3>Rajuk Uttara Model College</h3>
+            <p class="entry-role">Secondary School Certificate</p>
+            <p class="entry-meta">GPA 5.00 / 5.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">04</span> Publications</div>
+      <h2>Research publications</h2>
+
+      <div style="margin-top:24px;">
+        <div class="pub">
+          <div class="pub-index">[1]</div>
+          <div class="pub-body">
+            <p class="pub-title"><strong>S. S. Nahid</strong>, M. S. Islam, M. A. Hossain, M. M. Alam, and M. Shoyaib, "OCMTL: Transfer learning by orthogonal core-extraction of a matrix and its application in cross-project defect prediction."</p>
+            <p class="pub-venue">
+              Alexandria Engineering Journal, vol. 133, pp. 498–516, 2025.
+              <span class="badge">Elsevier · Q1 · IF 6.8</span><br>
+              <a href="https://www.sciencedirect.com/science/article/pii/S1110016825011573" target="_blank" rel="noopener">View on ScienceDirect →</a>
+            </p>
+          </div>
+        </div>
+        <div class="pub">
+          <div class="pub-index">[2]</div>
+          <div class="pub-body">
+            <p class="pub-title">M. Siam, <strong>S. S. Nahid</strong>, M. A. Hasan, M. N. A. Tawhid, and K. Muheymin-Us-Sakib, "DTM: Deterministic Approaches for Black-box Test Suite Minimization with Tree-based Similarity."</p>
+            <p class="pub-venue">
+              32nd Asia-Pacific Software Engineering Conference (APSEC 2025).
+              <span class="badge">Accepted</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">05</span> Professional Experience</div>
+      <h2>Teaching &amp; work history</h2>
+
+      <div style="margin-top:28px;">
+        <div class="entry">
+          <div class="entry-date">Dec 2025 — Present</div>
+          <div class="entry-body">
+            <h3><a href="https://fse.ewubd.edu/computer-science-engineering/faculty-view/shartaz.nahid" target="_blank" rel="noopener">East West University</a></h3>
+            <p class="entry-role">Lecturer, Department of Computer Science &amp; Engineering</p>
+            <p class="entry-desc">Courses: Statistics for Data Science, Object Oriented Concepts, IT Project Management and Entrepreneurship.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">Oct 2025 — Dec 2025</div>
+          <div class="entry-body">
+            <h3>University of Liberal Arts Bangladesh</h3>
+            <p class="entry-role">Adjunct Lecturer, Department of Computer Science &amp; Engineering</p>
+            <p class="entry-desc">Courses: Artificial Intelligence and Machine Learning, Big Data Analytics.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">May 2024 — Sep 2025</div>
+          <div class="entry-body">
+            <h3>Institute of Information Technology, University of Dhaka</h3>
+            <p class="entry-role">Instructor, Short Course Training Program</p>
+            <p class="entry-desc">Courses: Python Programming, Office Applications for Smart Office.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">Jan 2023 — Jun 2023</div>
+          <div class="entry-body">
+            <h3>Padma Bank Limited</h3>
+            <p class="entry-role">Intern, ICT Division</p>
+            <p class="entry-desc">Developed an internal web-based data management system for employees, with database integration, search, and filtering capabilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDED PROJECTS -->
+  <section id="funded">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">06</span> Funded Projects</div>
+      <h2>Research assistantships</h2>
+
+      <div style="margin-top:28px;">
+        <div class="entry">
+          <div class="entry-date">2024 — Present</div>
+          <div class="entry-body">
+            <h3>Research Assistant</h3>
+            <p class="entry-desc">"A Low-cost Vision-based System to Improve Efficiency of Assembly Lines in Ready-made Garments Factories" — University Grants Commission, Government of Bangladesh.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2024 — 2025</div>
+          <div class="entry-body">
+            <h3>Research Assistant</h3>
+            <p class="entry-desc">"Advanced NLP techniques and LLMs to automate data extraction from unstructured government documents" (confidential, under NDA) — Government of Bangladesh.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">07</span> Skills</div>
+      <h2>Technical skills</h2>
+
+      <div style="margin-top:22px;">
+        <div class="skill-row">
+          <div class="skill-label">Programming</div>
+          <div class="skill-value">MATLAB, C, C++, Java, Python, JavaScript, PHP</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Backend</div>
+          <div class="skill-value">Node.js, Express.js, Spring Boot, FastAPI, Laravel</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Frontend</div>
+          <div class="skill-value">Angular, React, HTML, CSS</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Database</div>
+          <div class="skill-value">MySQL, MongoDB</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">DevOps</div>
+          <div class="skill-value">Docker, Docker Swarm, Containerization</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">08</span> Awards &amp; Honors</div>
+      <h2>Grants &amp; awards</h2>
+
+      <div style="margin-top:28px;">
+        <div class="entry">
+          <div class="entry-date">2024 — 2025</div>
+          <div class="entry-body">
+            <h3>Research Fellowship for Master's Thesis</h3>
+            <p class="entry-meta">ICT Division, Ministry of Posts, Telecommunications and Information Technology, Bangladesh</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2024 — 2025</div>
+          <div class="entry-body">
+            <h3>Talentpool Honors Scholarship</h3>
+            <p class="entry-meta">Government of Bangladesh</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2019</div>
+          <div class="entry-body">
+            <h3>Champion, Yearly Competitive Programming Contest</h3>
+            <p class="entry-meta">IIT, University of Dhaka</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THESIS -->
+  <section id="thesis">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">09</span> Thesis</div>
+      <h2>Theses</h2>
+
+      <div style="margin-top:28px;">
+        <div class="entry">
+          <div class="entry-date">2024 — 2025</div>
+          <div class="entry-body">
+            <h3>Master's Thesis</h3>
+            <p class="entry-role">Orthogonal Core Matrix for Transfer Learning</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-date">2023</div>
+          <div class="entry-body">
+            <h3>Honors Thesis</h3>
+            <p class="entry-role">Automated Information Extraction and Visualization of Road Accident News</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap reveal">
+      <div class="eyebrow"><span class="num">10</span> Contact</div>
+      <h2>Get in touch</h2>
+
+      <div class="contact-grid">
+        <div class="contact-block">
+          <h3>Details</h3>
+          <ul>
+            <li>Dhaka, Bangladesh</li>
+            <li><a href="mailto:bsse1123@iit.du.ac.bd">bsse1123@iit.du.ac.bd</a></li>
+            <li><a href="https://github.com/Shartazsajidnahid" target="_blank" rel="noopener">github.com/Shartazsajidnahid</a></li>
+            <li><a href="https://scholar.google.com/citations?user=VjsLHKAAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Google Scholar profile</a></li>
+            <li><a class="btn" href="assets/cv/CV_serif.pdf" download>Download CV (PDF)</a></li>
+          </ul>
+        </div>
+        <div class="contact-block">
+          <h3>References</h3>
+          <div class="ref-card">
+            <p class="ref-name">Dr. Mohammad Shoyaib</p>
+            <p class="ref-meta">Professor, Institute of Information Technology<br>University of Dhaka<br><a href="mailto:shoyaib@iit.du.ac.bd">shoyaib@iit.du.ac.bd</a></p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-name">Dr. Ahmedul Kabir</p>
+            <p class="ref-meta">Professor, Institute of Information Technology<br>University of Dhaka<br><a href="mailto:shariful@iit.du.ac.bd">shariful@iit.du.ac.bd</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Shartaz Sajid Nahid</p>
+</footer>
+
+<script>
+  // mobile nav toggle
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', false);
+  }));
+
+  // scrollspy
+  const sections = document.querySelectorAll('main section[id]');
+  const navAnchors = document.querySelectorAll('nav.nav-links a');
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const link = document.querySelector(`nav.nav-links a[href="#${entry.target.id}"]`);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        navAnchors.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => spy.observe(s));
+
+  // reveal on scroll
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion) {
+    const reveal = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          reveal.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => reveal.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
